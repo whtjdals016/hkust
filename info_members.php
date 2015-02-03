@@ -1,6 +1,6 @@
 <?php include './head.php' ?>
 		<style>
-			.about-us-banner {
+        	.about-us-banner {
 				margin:auto;
 				margin-top:100px;	
 				
@@ -88,41 +88,70 @@
 			}
 			/*Developer Ends*/
         </style>
-		<?php include './header.php' ?>
-		<div class = "about-us-banner">
+<?php include './header.php' ?>
+        <div class = "about-us-banner">
         	<nav class ="navigation">
             	<ul>
                 	<li><a href="./info.php">Objective</a></li>
                     <li><a href="./info_members.php">Members</a></li>
                 </ul>
             </nav>
-        	<img src = "./img/about_us_what_is_malcha.png">
+        	<img src = "./img/about_us_who_are_we.png">
         </div>  
         <div class="content">
 			<div class="inner">
 				<div class="bodyframe">	
                 	<div class = "showlogo">
-                    	<img src="./img/logo1.jpg" alt="LOGO"; width= 240px;">
+                    	<img src="./img/logo1.jpg" alt="LOGO"; width= 240px;>
                     </div>
-					<div class="objective-box">
-						<h1>Objective
+
+					<div class="developer-info-box">
+						<h1>Developers
 						</h1>
-						<p>
-							Objective Goes Here Objective Goes Here Objective Goes Here Objective Goes Here Objective Goes Here
-                            Objective Goes Here Objective Goes Here Objective Goes Here Objective Goes Here Objective Goes Here 
-							Objective Goes Here Objective Goes Here Objective Goes Here Objective Goes Here Objective Goes Here
-							Objective Goes Here Objective Goes Here Objective Goes Here Objective Goes Here Objective Goes Here
-							Objective Goes Here Objective Goes Here Objective Goes Here Objective Goes Here Objective Goes Here
-							Objective Goes Here Objective Goes Here Objective Goes Here Objective Goes Here Objective Goes Here<br>
-						</p>
-						
+						<div class="personal-info" id="JiHyok">
+							<img src="./img/pic.jpg" alt="JiHyok KIM">
+							<div class="text-info">
+								<h1>JiHyok KIM</h1>
+								<p>Personal-Info goes here.</p>
+							</div>
+						</div>
+						<div class="personal-info" id="JangBack">
+							<img src="./img/pic.jpg" alt="JangBack LEE">
+							<div class="text-info">
+								<h1>JangBack LEE</h1>
+								<p>Personal-Info goes here.</p>
+							</div>
+						</div>
+						<div class="personal-info" id="JungHong">
+							<img src="./img/pic.jpg" alt="JungHong KIM">
+							<div class="text-info">
+								<h1>JungHong KIM</h1>
+								<p>Personal-Info goes here.</p>
+							</div>
+						</div>
+						<div class="personal-info" id="JaeMin">
+							<img src="./img/pic.jpg" alt="JaeMin SHIN">
+							<div class="text-info">
+								<h1>JaeMin SHIN</h1>
+								<p>Personal-Info goes here.</p>
+							</div>
+						</div>
+						<div class="personal-info" id="NaYeon">
+							<img src="./img/pic.jpg" alt="Nayeon LEE">
+							<div class="text-info">
+								<h1>Nayeon LEE</h1>
+								<p>Personal-Info goes here.</p>
+							</div>
+						</div>
+						<div class="personal-info" id="SungMin">
+							<img src="./img/pic.jpg" alt="SungMin CHO">
+							<div class="text-info">
+								<h1>SungMin CHO</h1>
+								<p>Personal-Info goes here.</p>
+							</div>
+						</div>
 					</div>
-                    
-                    <div class="our-story-box">
-                    	<h1>Our Story
-                        </h1>
-                    </div>
 				</div>
 			</div>
 		</div>
-	<?php include './footer.php' ?>
+<?php include './footer.php' ?>

@@ -1,6 +1,6 @@
 	</head>	
 	<body>
-		<header>
+		<header style="height: 102px">
 			<a href="./index.php">
 				<div class="logo">
 				</div>
@@ -12,7 +12,7 @@
 						<!---href value set to html files due to conveniency--->
 						<li><a href="./info.php">About Us</a></li>
 						<li><a href="./list.php">Market</a></li>
-						<li><a href="./news.php">News</a></li>
+						<li><a href="./news.php?no=0">News</a></li>
 						<li><a href="./register.php">Register</a></li>
 					</ul>
 				</nav>

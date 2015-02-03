@@ -11,10 +11,10 @@ $db = 'hkust';
 	$userid = $_POST['userid'];
 	$password = $_POST['password'];
 	//prevent mySQL injections
-	$userid = stripcslashes($userid);
-	$password = stripcslashes($password);
-	$userid = mysql_real_escape_string($userid);
-	$password = mysql_real_escape_string($password);
+	//$userid = stripcslashes($userid);
+	//$password = stripcslashes($password);
+	//$userid = mysql_real_escape_string($userid);
+	//$password = mysql_real_escape_string($password);
 	
 	//establishing connections, choosing DB, searching for ID and PW
 	$conn = mysqli_connect($servername, $db_username, $db_password, $db);
@@ -22,11 +22,14 @@ $db = 'hkust';
 		die("Connection Failed: " . mysqli_connect_error());
 	}
 	
-	$sql = "SELECT id,pw FROM members WHERE id='$userid' AND pw='$password'";
+	$sql = "SELECT id,pw,sid FROM members WHERE id='$userid' AND pw='$password'";
 	$result = mysqli_query($conn, $sql);
 	
 	if(mysqli_num_rows($result) == 1){
+		$row = mysqli_fetch_assoc($result);
 		$_SESSION['login_user'] = $userid;
+		$_SESSION['login_user_sid'] = $row['sid'];
+		mysqli_close($conn);
 		header('Location: '.$_SESSION['former_page']);
 	} else {
 		$error = "username or password is invalid";
