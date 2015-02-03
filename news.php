@@ -1,5 +1,4 @@
 <?php include './head.php'; ?>
-<link rel="stylesheet" href="./css/bootstrap.css">
 <style>
 
 </style>	

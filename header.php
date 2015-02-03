@@ -22,6 +22,9 @@
 				<?php
 					session_start();
 					$_SESSION['former_page'] = $_SERVER['PHP_SELF'];
+					if($_SESSION['former_page'] == '/news.php'){
+						$_SESSION['former_page'] = '/news.php?no=0';
+					}					
 					if(empty($_SESSION['login_user'])){
 						echo 	'<nav class="login_signup_button_panel">
 									<a href="#" class="login-button">Log In</a>
