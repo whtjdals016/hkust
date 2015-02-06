@@ -11,7 +11,7 @@
 					<ul>
 						<!---href value set to html files due to conveniency--->
 						<li><a href="./info.php">About Us</a></li>
-						<li><a href="./list.php">Market</a></li>
+						<li><a href="./list.php?no=0">Market</a></li>
 						<li><a href="./news.php?no=0">News</a></li>
 						<li><a href="./register.php">Register</a></li>
 					</ul>
@@ -24,7 +24,9 @@
 					$_SESSION['former_page'] = $_SERVER['PHP_SELF'];
 					if($_SESSION['former_page'] == '/news.php'){
 						$_SESSION['former_page'] = '/news.php?no=0';
-					}					
+					} else if($_SESSION['former_page'] == '/list.php'){
+						$_SESSION['former_page'] = '/list.php?no=0';
+					}
 					if(empty($_SESSION['login_user'])){
 						echo 	'<nav class="login_signup_button_panel">
 									<a href="#" class="login-button">Log In</a>

@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 04, 2015 at 09:40 AM
+-- Generation Time: Feb 06, 2015 at 03:29 PM
 -- Server version: 5.6.21
--- PHP Version: 5.5.19
+-- PHP Version: 5.6.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -32,12 +32,19 @@ DROP TABLE IF EXISTS `items`;
 CREATE TABLE IF NOT EXISTS `items` (
 `key` smallint(5) unsigned NOT NULL,
   `name` varchar(20) NOT NULL,
-  `price` int(8) NOT NULL,
+  `price` int(5) NOT NULL,
   `quantity` int(5) NOT NULL,
   `content` text NOT NULL,
   `seller` varchar(20) NOT NULL,
-  `img_path` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `img_path` varchar(50) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `items`
+--
+
+INSERT INTO `items` (`key`, `name`, `price`, `quantity`, `content`, `seller`, `img_path`) VALUES
+(1, 'Induction', 500, 1, 'Induction used for cooking: good quality', 'admin', 'test');
 
 -- --------------------------------------------------------
 
@@ -75,7 +82,7 @@ CREATE TABLE IF NOT EXISTS `news` (
   `title` varchar(70) NOT NULL,
   `content` text NOT NULL,
   `wdate` datetime NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `news`
@@ -109,7 +116,8 @@ INSERT INTO `news` (`key`, `id`, `sid`, `title`, `content`, `wdate`) VALUES
 (27, 'admin', 11111111, 'ì•„ë‹ˆì•¼ ã… ã… ã… ', 'ë°‘ìœ¼ë¡œ ë‚´ë ¤ê°€ìž–ì•„ ã… ã… ', '2015-02-02 18:48:17'),
 (28, 'admin', 11111111, 'ads', 'fasdf', '2015-02-02 18:59:29'),
 (29, 'admin', 11111111, 'fasdfdsf', 'asdfsdf', '2015-02-02 19:04:24'),
-(30, 'admin', 11111111, 'ë²„ê·¸ë§Žì•„..ã… ã… ã… ', 'ë²„ê·¸ë§Žë‹¹..ã… ã… ã… ', '2015-02-02 19:04:37');
+(30, 'admin', 11111111, 'ë²„ê·¸ë§Žì•„..ã… ã… ã… ', 'ë²„ê·¸ë§Žë‹¹..ã… ã… ã… ', '2015-02-02 19:04:37'),
+(31, 'asdfs', 1234123, 'asdfsdfasd', 'asdfsdf', '2015-02-03 12:27:37');
 
 --
 -- Indexes for dumped tables
@@ -141,7 +149,7 @@ ALTER TABLE `news`
 -- AUTO_INCREMENT for table `items`
 --
 ALTER TABLE `items`
-MODIFY `key` smallint(5) unsigned NOT NULL AUTO_INCREMENT;
+MODIFY `key` smallint(5) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `members`
 --
@@ -151,7 +159,7 @@ MODIFY `key` smallint(5) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 -- AUTO_INCREMENT for table `news`
 --
 ALTER TABLE `news`
-MODIFY `key` smallint(5) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=31;
+MODIFY `key` smallint(5) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=32;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
