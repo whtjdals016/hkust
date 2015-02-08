@@ -95,7 +95,9 @@
 						$end_page = $start_page + $page_list_size -1;	
 				?>
 					<div class="col-md-3">
-						<button type="button">Sell</button>
+					<form action="sell.php" method="get">
+						<button type="submit">Sell</button>
+					</form>
 					</div>
 					<div class="col-md-9 controls">
 					    <?php		
